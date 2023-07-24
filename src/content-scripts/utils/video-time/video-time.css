@@ -10,7 +10,6 @@
 .__n-yobiko-plus_video-time__popover {
   position: fixed;
   translate: -50% 0;
-  opacity: 0;
   z-index: 10000;
   background-color: #fdfdfd;
   border: 1px solid #efefef;
@@ -21,8 +20,6 @@
   grid-template-columns: auto 1fr;
   gap: 5px;
   font-size: 12px;
-  pointer-events: none;
-  transition: opacity .2s;
 }
 
 .__n-yobiko-plus_video-time__popover dt {

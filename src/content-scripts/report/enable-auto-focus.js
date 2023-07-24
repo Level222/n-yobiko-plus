@@ -13,6 +13,8 @@ export const enableAutoFocus = () => {
       return;
     }
 
+    mainContentIframe.contentWindow.focus();
+
     const mainContentIframeDoc = mainContentIframe.contentDocument;
 
     if (["evaluation-test", "evaluation-report", "essay-report"].includes(content)) {

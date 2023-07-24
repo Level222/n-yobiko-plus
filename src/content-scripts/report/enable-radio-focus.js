@@ -41,14 +41,16 @@ class RadioList {
     this.#list.addEventListener("keydown", this.#handleKeyDown);
   }
 
-  #handleFocusIn = () => {
-    this.#list.style.outline = "2.5px solid #4f73e3";
-    this.changeFolded(false);
+  #handleFocusIn = (e) => {
+    if (e.relatedTarget) {
+      this.changeFolded(false);
+    }
   };
 
-  #handleFocusOut = () => {
-    this.#list.style.outline = "";
-    this.changeFolded(true);
+  #handleFocusOut = (e) => {
+    if (e.relatedTarget) {
+      this.changeFolded(true);
+    }
   };
 
   #handleKeyDown = (e) => {

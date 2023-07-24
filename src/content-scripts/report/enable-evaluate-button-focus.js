@@ -23,14 +23,6 @@ export const enableEvaluateButtonFocus = () => {
       attributeFilter: ["class"]
     });
 
-    button.addEventListener("focusin", () => {
-      button.style.outline = "2px solid #4f73e3";
-    });
-
-    button.addEventListener("focusout", () => {
-      button.style.outline = "";
-    });
-
     button.addEventListener("keydown", ({ code }) => {
       if (code === "Enter") {
         button.click();

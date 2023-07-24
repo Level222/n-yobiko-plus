@@ -50,10 +50,10 @@ const toggleFullScreen = (video) => {
 };
 
 export const setShortcuts = () => {
-  const contentsList = new ContentsList();
-
   onKeyDown.addListener((e) => {
     const { code } = e;
+
+    const contentsList = new ContentsList();
 
     if (code === "KeyN" && testModifierKey(e, ["altKey"])) {
       contentsList.selectNext();

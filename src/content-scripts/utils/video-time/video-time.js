@@ -52,8 +52,6 @@ export class VideoTime {
     this.#popoverListItems.all.updateContent(allVideoSectionsTime);
     this.#popoverListItems.main.updateContent(mainVideoSectionsTime);
     this.#popoverListItems.supplement.updateContent(supplementVideoSectionsTime);
-
-    this.#updatePopoverPosition();
   }
 
   #init(parentElement) {
@@ -76,20 +74,31 @@ export class VideoTime {
       ...Object.entries(this.#popoverListItems).flatMap(([_key, listItem]) => listItem.getCurrent())
     );
 
+    this.#popover.style.display = "none";
+
     this.#triggerElement.addEventListener("pointerover", () => {
-      this.#popover.style.opacity = 1;
+      this.#popover.style.display = "";
+
+      this.#popover.animate([
+        { opacity: 0 },
+        { opacity: 1 }
+      ], 200);
     });
 
     this.#triggerElement.addEventListener("pointerleave", () => {
-      this.#popover.style.opacity = 0;
+      this.#popover.animate([
+        { opacity: 1 },
+        { opacity: 0 }
+      ], 200).finished.then(() => {
+        this.#popover.style.display = "none";
+      });
+    });
+
+    this.#triggerElement.addEventListener("pointermove", () => {
+      this.#updatePopoverPosition();
     });
 
     parentElement.replaceChildren(this.#triggerElement, this.#popover);
-
-    document.addEventListener("scroll", () => {
-      this.#updatePopoverPosition();
-    });
-    this.#updatePopoverPosition();
   }
 
   #updatePopoverPosition() {

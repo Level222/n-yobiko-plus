@@ -7,6 +7,13 @@ export const disableMathJaxFocus = () => {
       return;
     }
 
-    injectScript("./disable-math-jax-focus.bundle.js", mainContentIframe.contentDocument.body);
+    const mainContentIframeDoc = mainContentIframe.contentDocument;
+
+    const mathJaxElements = mainContentIframeDoc.querySelectorAll(".MathJax_CHTML");
+    for (const element of mathJaxElements) {
+      element.tabIndex = -1;
+    }
+
+    injectScript("./disable-math-jax-focus-config.bundle.js", mainContentIframeDoc.body);
   });
 };

@@ -7,7 +7,7 @@ module.exports = {
     "chapters": "./src/content-scripts/chapters/index.js",
     "monthly-reports": "./src/content-scripts/monthly-reports/index.js",
     "report-result": "./src/content-scripts/report-result/index.js",
-    "disable-math-jax-focus": "./src/injections/disable-math-jax-focus.js"
+    "disable-math-jax-focus-config": "./src/injections/disable-math-jax-focus-config.js"
   },
   output: {
     path: path.resolve(__dirname, "dist", "unpacked"),

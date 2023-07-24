@@ -11,7 +11,7 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "disable-math-jax-focus.bundle.js"
+        "disable-math-jax-focus-config.bundle.js"
       ],
       "matches": [
         "https://www.nnn.ed.nico/*"

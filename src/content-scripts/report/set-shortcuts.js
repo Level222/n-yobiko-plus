@@ -46,12 +46,12 @@ export const setShortcuts = () => {
   onKeyDown.addListener((e) => {
     const { code } = e;
 
-    if (["ArrowRight", "ArrowDown"].includes(code) && testModifierKey(e, ["shiftKey"])) {
+    if (code === "KeyN" && testModifierKey(e, ["altKey"])) {
       contentsList.selectNext();
       return;
     }
 
-    if (["ArrowLeft", "ArrowUp"].includes(code) && testModifierKey(e, ["shiftKey"])) {
+    if (code === "KeyN" && testModifierKey(e, ["altKey", "shiftKey"])) {
       contentsList.selectPrev();
       return;
     }

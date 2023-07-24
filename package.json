@@ -2,7 +2,7 @@
   "scripts": {
     "build": "npm run build:extension && npm run build:zip",
     "build:extension": "webpack --config webpack.prod.js",
-    "build:zip": "cd ./dist/unpacked && zip -r9 ../n-yobiko-plus.zip * -x .DS_Store",
+    "build:zip": "cd ./dist/unpacked && rm -rf ../n-yobiko-plus.zip && zip -r9 ../n-yobiko-plus.zip * -x *.DS_Store",
     "dev": "webpack --config webpack.dev.js",
     "watch": "webpack -w --config webpack.dev.js"
   },

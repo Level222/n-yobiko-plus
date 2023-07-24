@@ -22,35 +22,12 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.nnn.ed.nico/courses/*/chapters/*"
-      ],
-      "js": [
-        "report.bundle.js"
-      ]
-    },
-    {
-      "matches": [
-        "https://www.nnn.ed.nico/courses/*"
-      ],
-      "js": [
-        "chapters.bundle.js"
-      ]
-    },
-    {
-      "matches": [
-        "https://www.nnn.ed.nico/study_plans/month/*/*"
-      ],
-      "js": [
-        "monthly-reports.bundle.js"
-      ]
-    },
-    {
-      "matches": [
+        "https://www.nnn.ed.nico/*",
         "https://secure.nnn.ed.jp/mypage/result/pc/list/index",
         "https://s-secure.nnn.ed.jp/mypage/result/pc/list/index"
       ],
       "js": [
-        "report-result.bundle.js"
+        "content-scripts.bundle.js"
       ]
     }
   ]

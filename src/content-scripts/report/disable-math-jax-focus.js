@@ -1,5 +1,5 @@
 import { onMainContentIframeMutated } from "./on-main-content-iframe-mutated";
-import { injectScript } from "./inject-script";
+import { injectScript } from "../utils/inject-script";
 
 export const disableMathJaxFocus = () => {
   onMainContentIframeMutated.addListener(({ content, mainContentIframe }) => {

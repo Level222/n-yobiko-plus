@@ -1,7 +1,7 @@
 import { VideoTime } from "../utils/video-time/video-time";
 import { onMainContentIframeMutated } from "./on-main-content-iframe-mutated";
 
-export const showVideoTime = () => {
+export const showVideoTimeReport = () => {
   const listHeader = document.querySelector(".u-list-header");
   Object.assign(listHeader.style, {
     display: "flex",

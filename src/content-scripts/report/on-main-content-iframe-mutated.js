@@ -1,4 +1,4 @@
-import { OriginalEvent } from "./original-event";
+import { OriginalEvent } from "../utils/original-event";
 
 const MAIN_CONTENT_TYPES = [
   {

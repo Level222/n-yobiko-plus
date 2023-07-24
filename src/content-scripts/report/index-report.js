@@ -1,4 +1,4 @@
-import { showVideoTime } from "./show-video-time";
+import { showVideoTimeReport } from "./show-video-time-report";
 import { enableWordCounting } from "./enable-word-counting";
 import { setShortcuts } from "./set-shortcuts";
 import { enableEvaluateButtonFocus } from "./enable-evaluate-button-focus";
@@ -7,15 +7,17 @@ import { enableAutoFocus } from "./enable-auto-focus";
 import { disableMathJaxFocus } from "./disable-math-jax-focus";
 import { enableFocusStyle } from "./enable-focus-style";
 
-const isSchoolReportPage = () => !!document.getElementById("lesson-modal");
+export const indexReport = () => {
+  const isSchoolReportPage = () => !!document.getElementById("lesson-modal");
 
-if (isSchoolReportPage()) {
-  showVideoTime();
-  enableWordCounting();
-  setShortcuts();
-  enableEvaluateButtonFocus();
-  enableRadioFocus();
-  enableAutoFocus();
-  disableMathJaxFocus();
-  enableFocusStyle();
-}
+  if (isSchoolReportPage()) {
+    showVideoTimeReport();
+    enableWordCounting();
+    setShortcuts();
+    enableEvaluateButtonFocus();
+    enableRadioFocus();
+    enableAutoFocus();
+    disableMathJaxFocus();
+    enableFocusStyle();
+  }
+};

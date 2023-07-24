@@ -3,10 +3,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
-    "report": "./src/content-scripts/report/index.js",
-    "chapters": "./src/content-scripts/chapters/index.js",
-    "monthly-reports": "./src/content-scripts/monthly-reports/index.js",
-    "report-result": "./src/content-scripts/report-result/index.js",
+    "content-scripts": "./src/content-scripts/index.js",
     "disable-math-jax-focus-config": "./src/injections/disable-math-jax-focus-config.js"
   },
   output: {

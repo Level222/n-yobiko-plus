@@ -1,4 +1,4 @@
-import { OriginalEvent } from "./original-event";
+import { OriginalEvent } from "../utils/original-event";
 import { onMainContentIframeMutated } from "./on-main-content-iframe-mutated";
 import { getElementAsync } from "../utils/get-element-async";
 

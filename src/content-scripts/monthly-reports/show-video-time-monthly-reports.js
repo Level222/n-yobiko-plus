@@ -4,7 +4,7 @@ import { getElementAsync } from "../utils/get-element-async";
 const CHAPTER_ANCHOR_SELECTOR =
   "a[href^='\/courses\/'][href*='\/chapters\/']:has( > div > [aria-label=理解度・進捗度のプログレスバー])";
 
-export const showVideoTime = async () => {
+export const showVideoTimeMonthlyReports = async () => {
   await getElementAsync(
     () => document.querySelector(CHAPTER_ANCHOR_SELECTOR),
     document.getElementById("root"),

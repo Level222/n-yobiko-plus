@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "N予備校+",
+  "version": "1.0.0",
+  "description": "N予備校サイトに様々な機能を追加する拡張機能。",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "disable-math-jax-focus.bundle.js"
+      ],
+      "matches": [
+        "https://www.nnn.ed.nico/*"
+      ],
+      "use_dynamic_url": true
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.nnn.ed.nico/courses/*/chapters/*"
+      ],
+      "js": [
+        "report.bundle.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.nnn.ed.nico/courses/*"
+      ],
+      "js": [
+        "chapters.bundle.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.nnn.ed.nico/study_plans/month/*/*"
+      ],
+      "js": [
+        "monthly-reports.bundle.js"
+      ]
+    },
+    {
+      "matches": [
+        "https://secure.nnn.ed.jp/mypage/result/pc/list/index",
+        "https://s-secure.nnn.ed.jp/mypage/result/pc/list/index"
+      ],
+      "js": [
+        "report-result.bundle.js"
+      ]
+    }
+  ]
+}

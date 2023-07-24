@@ -40,6 +40,15 @@ const togglePictureInPicture = (video) => {
   }
 };
 
+const toggleFullScreen = (video) => {
+  const { ownerDocument } = video;
+  if (ownerDocument.fullscreenElement === video) {
+    ownerDocument.exitFullscreen();
+  } else {
+    video.requestFullscreen();
+  }
+};
+
 export const setShortcuts = () => {
   const contentsList = new ContentsList();
 
@@ -65,8 +74,12 @@ export const setShortcuts = () => {
     const mainContentIframeDoc = mainContentIframe.contentDocument;
     const video = mainContentIframeDoc.getElementById("video-player");
 
-    if (video && code === "KeyP" && testModifierKey(e, [])) {
+    if (e.target === video && code === "KeyP" && testModifierKey(e, [])) {
       togglePictureInPicture(video);
+    }
+
+    if (e.target === video && code === "KeyF" && testModifierKey(e, [])) {
+      toggleFullScreen(video);
     }
   });
 };

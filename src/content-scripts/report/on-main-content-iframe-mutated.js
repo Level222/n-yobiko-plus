@@ -45,7 +45,6 @@ export const onMainContentIframeMutated = new OriginalEvent((dispatch) => {
       mainContentIframe.addEventListener("load", () => {
         const path = mainContentIframe.contentWindow.location.pathname;
         const type = [...MAIN_CONTENT_TYPES].find(({ regex }) => regex.test(path));
-        console.log(`content: ${type ? type.content : "other"}`);
         dispatch({
           content: type ? type.content : "other",
           mainContentIframe
@@ -53,7 +52,6 @@ export const onMainContentIframeMutated = new OriginalEvent((dispatch) => {
       });
     } else {
       mainContentIframeObserver = null;
-      console.log("content: null");
       dispatch({
         content: null,
         mainContentIframe: null

@@ -4,6 +4,7 @@ import styles from "./focus.css";
 export const enableFocusStyle = () => {
   onMainContentIframeMutated.addListener(({ content, mainContentIframe }) => {
     if (["evaluation-test", "evaluation-report", "essay-report"].includes(content)) {
+      styles.unuse();
       styles.use({ document: mainContentIframe.contentDocument });
     }
   });

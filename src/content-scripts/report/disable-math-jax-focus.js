@@ -1,9 +1,18 @@
 import { onMainContentIframeMutated } from "./on-main-content-iframe-mutated";
 import { injectScript } from "../utils/inject-script";
 
+const targetIframeContents = [
+  "evaluation-test",
+  "evaluation-test-result",
+  "evaluation-report",
+  "evaluation-report-result",
+  "essay-report",
+  "essay-report-result"
+];
+
 export const disableMathJaxFocus = () => {
   onMainContentIframeMutated.addListener(({ content, mainContentIframe }) => {
-    if (!["evaluation-test", "evaluation-test-result"].includes(content)) {
+    if (!targetIframeContents.includes(content)) {
       return;
     }
 

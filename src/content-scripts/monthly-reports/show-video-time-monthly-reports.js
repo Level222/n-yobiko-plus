@@ -2,7 +2,7 @@ import { VideoTime } from "../utils/video-time/video-time";
 import { getElementAsync } from "../utils/get-element-async";
 
 const CHAPTER_ANCHOR_SELECTOR =
-  "a[href^='\/courses\/'][href*='\/chapters\/']:has( > div > [aria-label=理解度・進捗度のプログレスバー])";
+  "a[href^='\/courses\/'][href*='\/chapters\/']:has( > div > div > div > ul > li > div[role=progressbar])";
 
 export const showVideoTimeMonthlyReports = async () => {
   await getElementAsync(

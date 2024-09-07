@@ -2,7 +2,15 @@
 
 N予備校サイトに様々な機能を追加するChrome拡張機能です。
 
-**現時点ではN/S高のレポートのみに対応しています。他のコースはページの構造があまりにも異なるため、今のところ対応しておりません。**
+## このリポジトリはアーカイブされました
+
+新しいバージョンの開発は <https://github.com/Level222/zen-study-plus> で行っています。
+
+### なぜアーカイブしたのか
+
+- JavaScriptで開発されてきたのを、TypeScriptで書き直すため
+- Webページの構造が大幅に変更されていて、多くの機能が動作しなくなったため
+- 2024年8月に「N予備校」が「ZEN Study」にリニューアルしたのに伴い、拡張機能の名称を変更するため
 
 ## インストール
 
@@ -10,7 +18,7 @@ N予備校サイトに様々な機能を追加するChrome拡張機能です。
 
 ### 一般向け
 
-1. https://github.com/Level222/n-yobiko-plus/releases/latest/download/n-yobiko-plus.zip をダウンロード。 `zip` は解凍してもしなくてもよい。
+1. <https://github.com/Level222/n-yobiko-plus/releases/latest/download/n-yobiko-plus.zip> をダウンロード。 `zip` は解凍してもしなくてもよい。
 2. `Google Chrome` を開き、 `chrome://extensions` とアドレスバーに入力して開く。
 3. 右上の `デベロッパーモード` を有効にする。
 4. ダウンロードした `zip` ファイルまたは解凍したフォルダを、左上の `パッケージ化されていない拡張機能を読み込む` から読み込むか、ドラッグアンドドロップする。
